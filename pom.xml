@@ -27,6 +27,7 @@
         <module>learning-1-eventbus</module>
         <module>learning-2-lombok</module>
         <module>learning-2-lifecycle</module>
+        <module>learning-2-utils</module>
     </modules>
 
     <dependencies>
