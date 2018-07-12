@@ -1,4 +1,4 @@
-package java.learning.example.base;
+package learning.example.base;
 
 /**
  * java 基础学习示例
