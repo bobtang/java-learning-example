@@ -24,8 +24,6 @@
     </properties>
 
     <modules>
-        <!-- 第一个基础 -->
-        <module>learning-1-base</module>
         <module>learning-2-lombok</module>
         <module>learning-2-lifecycle</module>
     </modules>
