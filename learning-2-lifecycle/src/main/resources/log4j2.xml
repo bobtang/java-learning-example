@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="WARN" monitorInterval="600">
+    <Properties>
+        <Property name="LOG_HOME">logs</Property>
+    </Properties>
+
+    <Appenders>
+        <Console name="Console" target="SYSTEM_OUT">
+            <PatternLayout pattern="%-4relative %d{HH:mm:ss:SSS} | %m%n"/>
+        </Console>
+
+        <RollingRandomAccessFile name="ServiceAppender" fileName="${LOG_HOME}/info.log"
+                                 filePattern="${LOG_HOME}/$${date:yyyy-MM-dd}/info-%d{yyyy-MM-dd}-%i.log.gz">
+            <ThresholdFilter level="debug" onMatch="ACCEPT" onMismatch="DENY"/>
+            <PatternLayout
+                    pattern="%-4relative %d{yyyy-MM-dd HH:mm:ss:SSS} %-5p [%thread] %C.%M:%L | %m%n"/>
+            <Policies>
+                <TimeBasedTriggeringPolicy/>
+                <SizeBasedTriggeringPolicy size="300 MB"/>
+            </Policies>
+            <DefaultRolloverStrategy max="9999"/>
+        </RollingRandomAccessFile>
+
+        <RollingRandomAccessFile name="ServiceErrorAppender" fileName="${LOG_HOME}/error.log"
+                                 filePattern="${LOG_HOME}/$${date:yyyy-MM-dd}/error-%d{yyyy-MM-dd}-%i.log.gz">
+            <ThresholdFilter level="error" onMatch="ACCEPT" onMismatch="DENY"/>
+            <PatternLayout
+                    pattern="%-4relative %d{yyyy-MM-dd HH:mm:ss:SSS} %-5p [%thread] %C.%M:%L | %m%n"/>
+            <Policies>
+                <TimeBasedTriggeringPolicy/>
+                <SizeBasedTriggeringPolicy size="200 MB"/>
+            </Policies>
+            <DefaultRolloverStrategy max="9999"/>
+        </RollingRandomAccessFile>
+
+    </Appenders>
+
+    <Loggers>
+        <root level="debug">
+            <appender-ref ref="Console"/>
+            <appender-ref ref="ServiceAppender"/>
+            <appender-ref ref="ServiceErrorAppender"/>
+        </root>
+
+        <logger name="org.springframework" level="info"/>
+    </Loggers>
+</Configuration>
