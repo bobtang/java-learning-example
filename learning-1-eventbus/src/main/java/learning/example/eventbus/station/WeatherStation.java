@@ -21,6 +21,6 @@ public class WeatherStation {
         // ...数据采集完
         float temperature = 30.0f;
 
-        eventBus.safePost(WeatherChangeEvent.of(temperature));
+        eventBus.post(WeatherChangeEvent.of(temperature));
     }
 }
