@@ -4,11 +4,18 @@ import com.alibaba.fastjson.JSON;
 import learning.model.Dish;
 
 import java.util.Arrays;
+import java.util.Comparator;
+import java.util.IntSummaryStatistics;
 import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 import java.util.stream.Stream;
+
+import static java.util.stream.Collectors.joining;
+import static java.util.stream.Collectors.maxBy;
+import static java.util.stream.Collectors.summarizingInt;
+import static java.util.stream.Collectors.summingInt;
 
 /**
  * author：millet
@@ -123,6 +130,10 @@ public class StreamApiTest {
         List<Integer> numbers = Arrays.asList(1, 2, 3, 4, 5);
         int sum = numbers.stream().reduce(0, Integer::sum);//Integer::max  Integer::min
         System.out.println(sum);
+
+        Optional<Integer> optional = numbers.stream().reduce(Integer::max);
+        System.out.println(optional.get());
+
     }
 
     public void boxedStream() {
@@ -132,6 +143,20 @@ public class StreamApiTest {
         // 转回普通Stream
         Stream<Integer> stream = intStream.boxed();
     }
+    public void collectors(){
+        List<Dish> menu = init();
+        Comparator<Dish> dishCaloriesComparator = Comparator.comparingInt(Dish::getCalories);
+
+        Optional<Dish> mostCalorieDish = menu.stream().collect(maxBy(dishCaloriesComparator));
+
+        int totalCalories = menu.stream().collect(summingInt(Dish::getCalories));//Collectors.summingLong，Collectors.summingDouble
+
+        IntSummaryStatistics menuStatistics = menu.stream().collect(summarizingInt(Dish::getCalories));
+
+        //请注意，joining在内部使用了StringBuilder来把生成的字符串逐个追加起来。
+        String shortMenu = menu.stream().map(Dish::getName).collect(joining());
+    }
+
     public List<Dish> init() {
         return Arrays.asList(
                 new Dish("pork", false, 800, Dish.Type.MEAT),

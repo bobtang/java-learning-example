@@ -15,7 +15,9 @@ public class Test {
 
     }
 
-    /** TODO lambda表达式替换匿名类；简化代码*/
+    /** TODO lambda表达式替换匿名类；简化代码
+     *  Java 8中增加的另一个编程概念是通过API来传递代码的能力。
+     * */
     private static void test_1() {
         new Thread(new Runnable() {
             @Override
