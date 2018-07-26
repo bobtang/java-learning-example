@@ -18,7 +18,7 @@ public class ConcurrentHasMapUtils {
         }
         System.out.println(map.toString());
 
-        // 分流计算
+        //
         System.out.println(map.reduce(2, (key, value) -> value, (value, value2) -> value + value2).toString());
     }
 }
