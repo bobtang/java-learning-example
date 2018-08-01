@@ -30,6 +30,7 @@
         <module>learning-2-utils</module>
         <module>learning-3-java8</module>
         <module>learning-4-map</module>
+        <module>learning-5-dynamicproxy</module>
     </modules>
 
     <dependencies>
