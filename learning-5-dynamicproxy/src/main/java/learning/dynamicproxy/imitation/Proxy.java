@@ -63,10 +63,15 @@ public class Proxy {
 		fw.close();
 		
 		//compile
+		// 通过ToolProvider类的静态方法getSystemJavaCompiler来得到一个JavaCompiler接口的实例。
 		JavaCompiler compiler = ToolProvider.getSystemJavaCompiler();
+		// 获取一个文件管理器StandardJavaFileManage
 		StandardJavaFileManager fileMgr = compiler.getStandardFileManager(null, null, null);
+		// 文件管理器根与文件连接起来
 		Iterable units = fileMgr.getJavaFileObjects(fileName);
+		// 创建编译的任务
 		CompilationTask t = compiler.getTask(null, fileMgr, null, null, null, units);
+		// 执行编译
 		t.call();
 		fileMgr.close();
 		
