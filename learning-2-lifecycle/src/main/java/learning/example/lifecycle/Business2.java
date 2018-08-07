@@ -19,12 +19,12 @@ public class Business2 implements Lifecycle {
     }
 
     @Override
-    public void start() throws Throwable {
+    public void start() throws Exception {
         log.info("业务2 初始化...");
     }
 
     @Override
-    public void stop() throws Throwable {
+    public void stop() throws Exception {
 
     }
 }

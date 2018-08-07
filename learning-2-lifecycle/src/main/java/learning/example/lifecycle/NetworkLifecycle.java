@@ -19,13 +19,13 @@ public class NetworkLifecycle implements Lifecycle {
     }
 
     @Override
-    public void start() throws Throwable {
+    public void start() throws Exception {
         log.info("初始化...");
         log.info("开放端口...");
     }
 
     @Override
-    public void stop() throws Throwable {
+    public void stop() throws Exception {
         log.info("关闭端口...");
         log.info("关闭所有Channel...");
     }

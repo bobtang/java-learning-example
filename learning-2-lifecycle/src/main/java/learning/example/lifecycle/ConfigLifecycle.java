@@ -19,12 +19,12 @@ public class ConfigLifecycle implements Lifecycle {
     }
 
     @Override
-    public void start() throws Throwable {
+    public void start() throws Exception {
         log.info("加载配置...");
     }
 
     @Override
-    public void stop() throws Throwable {
+    public void stop() throws Exception {
 
     }
 }

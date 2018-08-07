@@ -19,13 +19,13 @@ public class RepositoryLifecycle implements Lifecycle {
     }
 
     @Override
-    public void start() throws Throwable {
+    public void start() throws Exception {
         log.info("仓储初始化中...");
         log.info("开启线程池...");
     }
 
     @Override
-    public void stop() throws Throwable {
+    public void stop() throws Exception {
         log.info("关闭线程池...");
         log.info("清空延迟更新缓冲...");
     }
