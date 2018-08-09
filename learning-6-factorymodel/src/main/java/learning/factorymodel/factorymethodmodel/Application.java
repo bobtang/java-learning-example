@@ -1,9 +1,9 @@
 package learning.factorymodel.factorymethodmodel;
 
-import learning.factorymodel.factorymethodmodel.concretecreator.BlackBallPen;
-import learning.factorymodel.factorymethodmodel.concretecreator.BlueBallPen;
-import learning.factorymodel.factorymethodmodel.concretecreator.RedBallPen;
-import learning.factorymodel.factorymethodmodel.creator.BallPen;
+import learning.factorymodel.factorymethodmodel.concretefactory.BlackBallPen;
+import learning.factorymodel.factorymethodmodel.concretefactory.BlueBallPen;
+import learning.factorymodel.factorymethodmodel.concretefactory.RedBallPen;
+import learning.factorymodel.factorymethodmodel.factory.BallPen;
 import learning.factorymodel.factorymethodmodel.product.PenCore;
 
 /**

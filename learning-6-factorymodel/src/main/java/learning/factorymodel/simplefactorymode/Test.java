@@ -7,10 +7,10 @@ public class Test {
     // The Main function only for our test
     public static void main(String[] args) {
         Factory myFactory = new Factory();
-        Window myBigWindow = myFactory.CreateWindow("Big");
+        Window myBigWindow = myFactory.createWindow("Big");
         myBigWindow.func();
 
-        Window mySmallWindow = myFactory.CreateWindow("Small");
+        Window mySmallWindow = myFactory.createWindow("Small");
         mySmallWindow.func();
     }
 }

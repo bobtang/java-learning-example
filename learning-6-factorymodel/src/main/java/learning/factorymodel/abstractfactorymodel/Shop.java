@@ -5,11 +5,6 @@ import learning.factorymodel.abstractfactorymodel.concretefactory.BeijingClothes
 import learning.factorymodel.abstractfactorymodel.concretefactory.ShanghaiClothesFactory;
 import learning.factorymodel.abstractfactorymodel.product.Trousers;
 import learning.factorymodel.abstractfactorymodel.product.UpperClothes;
-import learning.factorymodel.factorymethodmodel.concretecreator.BlackBallPen;
-import learning.factorymodel.factorymethodmodel.concretecreator.BlueBallPen;
-import learning.factorymodel.factorymethodmodel.concretecreator.RedBallPen;
-import learning.factorymodel.factorymethodmodel.creator.BallPen;
-import learning.factorymodel.factorymethodmodel.product.PenCore;
 
 /**
  * 应用-商店

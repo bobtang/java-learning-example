@@ -1,9 +1,9 @@
-package learning.factorymodel.factorymethodmodel.creator;
+package learning.factorymodel.factorymethodmodel.factory;
 
 import learning.factorymodel.factorymethodmodel.product.PenCore;
 
 /**
- * 构造者（Creator）
+ * Factory（抽象工厂）
  */
 public abstract class BallPen {
     public BallPen() {

@@ -1,11 +1,11 @@
-package learning.factorymodel.factorymethodmodel.concretecreator;
+package learning.factorymodel.factorymethodmodel.concretefactory;
 
 import learning.factorymodel.factorymethodmodel.concreteproduct.RedPenCore;
-import learning.factorymodel.factorymethodmodel.creator.BallPen;
+import learning.factorymodel.factorymethodmodel.factory.BallPen;
 import learning.factorymodel.factorymethodmodel.product.PenCore;
 
 /**
- * 具体构造者（ConcreteCreator）
+ * ConcreteFactory（具体工厂）
  */
 public class RedBallPen extends BallPen {
     public PenCore getPenCore() {

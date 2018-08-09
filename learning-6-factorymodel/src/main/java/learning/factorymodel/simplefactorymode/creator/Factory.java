@@ -8,7 +8,7 @@ import learning.factorymodel.simplefactorymode.product.Window;
  * 工厂类
  */
 public class Factory {
-    public Window CreateWindow(String type) {
+    public Window createWindow(String type) {
         if (type.equals("Big")) {
             return new WindowBig();
         } else if (type.equals("Small")) {
