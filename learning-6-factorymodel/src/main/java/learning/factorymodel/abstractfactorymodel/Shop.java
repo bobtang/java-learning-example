@@ -27,6 +27,7 @@ public class Shop {
         System.out.println(trouser.getName() + ":");
         System.out.print("腰围:" + trouser.getWaistSize());
         System.out.println("身高:" + trouser.getHeight());
+        System.out.println("<------------------------------>");
     }
 
     public static void main(String args[]) {
