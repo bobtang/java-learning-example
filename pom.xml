@@ -31,6 +31,7 @@
         <module>learning-3-java8</module>
         <module>learning-4-map</module>
         <module>learning-5-dynamicproxy</module>
+        <module>learning-6-factorymodel</module>
     </modules>
 
     <dependencies>
