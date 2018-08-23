@@ -32,6 +32,8 @@
         <module>learning-4-map</module>
         <module>learning-5-dynamicproxy</module>
         <module>learning-6-factorymodel</module>
+        <module>learning-7-collection</module>
+
     </modules>
 
     <dependencies>
