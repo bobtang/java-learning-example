@@ -14,7 +14,7 @@ public class VolatileTestB {
 
 	public static void main(String[] args) throws InterruptedException {
 		final VolatileTestB testB = new VolatileTestB();
-		for (int n = 0; n < 1000; n++) {
+		for (int n = 0; n < 10000; n++) {
 			new Thread(new Runnable() {
 				@Override
 				public void run() {
