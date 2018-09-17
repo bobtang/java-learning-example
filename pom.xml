@@ -33,8 +33,7 @@
         <module>learning-5-dynamicproxy</module>
         <module>learning-6-factorymodel</module>
         <module>learning-7-collection</module>
-
-        <module>learning-8-voliate</module>
+        <module>learning-8-volatile</module>
     </modules>
 
     <dependencies>
