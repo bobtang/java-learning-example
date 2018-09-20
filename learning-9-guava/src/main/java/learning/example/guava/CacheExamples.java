@@ -28,7 +28,7 @@ public class CacheExamples {
     private final LoadingCache<Integer, String> cache = CacheBuilder.newBuilder()
             .expireAfterAccess(1, TimeUnit.SECONDS)
 //            .expireAfterWrite(1, TimeUnit.SECONDS)
-            .maximumSize(10)
+//            .maximumSize(10)
             .removalListener(removalListener)
             .build(new CacheLoader<Integer, String>() {
                 @Override
