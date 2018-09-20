@@ -1,6 +1,6 @@
 package learning.example.guava;
 
-import com.google.common.base.Function;
+//import com.google.common.base.Function;
 import com.google.common.cache.CacheBuilder;
 import com.google.common.cache.CacheLoader;
 import com.google.common.cache.LoadingCache;
@@ -8,6 +8,7 @@ import com.google.common.cache.RemovalListener;
 import org.junit.Test;
 
 import java.util.concurrent.TimeUnit;
+import java.util.function.Function;
 
 /**
  * Created by LeiJun on 2018/9/20.
