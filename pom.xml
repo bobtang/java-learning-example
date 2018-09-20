@@ -34,6 +34,7 @@
         <module>learning-6-factorymodel</module>
         <module>learning-7-collection</module>
         <module>learning-8-volatile</module>
+        <module>learning-9-guava</module>
     </modules>
 
     <dependencies>
