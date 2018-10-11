@@ -35,6 +35,7 @@
         <module>learning-7-collection</module>
         <module>learning-8-volatile</module>
         <module>learning-9-guava</module>
+        <module>learning-10-queue</module>
     </modules>
 
     <dependencies>
