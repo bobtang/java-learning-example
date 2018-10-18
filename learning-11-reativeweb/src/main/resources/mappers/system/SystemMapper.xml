@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--命名空间应该是对应接口的包名+接口名 -->
+<mapper namespace="com.example.demoreactiveweb.module.system.repository.SystemDao">
+    <!--id应该是接口中的方法，结果类型如没有配置别名则应该使用全名称 -->
+    <select id="getAll" resultType="SystemData">
+        select id,name,level from t_system
+    </select>
+
+    <select id="getBookById" resultType="SystemData">
+        select id,name,level from t_system where id=#{id}
+    </select>
+    <!-- 增加 -->
+    <insert id="add">
+        insert into t_system(name,level)
+        values(
+          #{name},#{level}
+        )
+    </insert>
+    <!-- 删除 -->
+    <delete id="delete">
+        delete from t_system where id=#{id}
+    </delete>
+    <!-- 更新 -->
+    <update id="update">
+        update t_system set name=#{name},level=#{level}
+        where id=#{id}
+    </update>
+</mapper>
