@@ -2,6 +2,7 @@ package learning.example.lifecycle;
 
 import com.yaowan.game.dfh.common.base.lifecycle.Lifecycle;
 import com.yaowan.game.dfh.common.base.lifecycle.LifecycleInfo;
+import com.yaowan.game.dfh.common.base.lifecycle.Ordinal;
 import com.yaowan.game.dfh.common.base.lifecycle.Priority;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;
@@ -15,7 +16,7 @@ public class ConfigLifecycle implements Lifecycle {
 
     @Override
     public LifecycleInfo getInfo() {
-        return LifecycleInfo.valueOf(Priority.SYSTEM, "配置");
+        return LifecycleInfo.valueOf(Priority.SYSTEM, Ordinal._0, "配置");
     }
 
     @Override

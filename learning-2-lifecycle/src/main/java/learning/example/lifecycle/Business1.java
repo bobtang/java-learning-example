@@ -2,6 +2,7 @@ package learning.example.lifecycle;
 
 import com.yaowan.game.dfh.common.base.lifecycle.Lifecycle;
 import com.yaowan.game.dfh.common.base.lifecycle.LifecycleInfo;
+import com.yaowan.game.dfh.common.base.lifecycle.Ordinal;
 import com.yaowan.game.dfh.common.base.lifecycle.Priority;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;
@@ -15,7 +16,7 @@ public class Business1 implements Lifecycle {
 
     @Override
     public LifecycleInfo getInfo() {
-        return LifecycleInfo.valueOf(Priority.MEDIUM, "业务1");
+        return LifecycleInfo.valueOf(Priority.MEDIUM, Ordinal._0, "业务1");
     }
 
     @Override
