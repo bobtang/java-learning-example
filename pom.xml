@@ -37,6 +37,7 @@
         <module>learning-9-guava</module>
         <module>learning-10-queue</module>
         <module>learning-11-reativeweb</module>
+        <module>learning-12-proxycglib</module>
     </modules>
 
     <dependencies>
