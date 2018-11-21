@@ -40,7 +40,7 @@ public class RoleController {
     public String login(long id) {
         Role role = roleService.get(id);
         long time = System.currentTimeMillis() / 1000;
-        log.info("登录成功， 登录时间: %s", time);
+        log.info(String.format("登录成功， 登录时间: %d", time));
         role.setLoginTime((int) (System.currentTimeMillis() / 1000));
         roleService.save(role);
         return String.format("登录成功, nick: %s", role.getNick());

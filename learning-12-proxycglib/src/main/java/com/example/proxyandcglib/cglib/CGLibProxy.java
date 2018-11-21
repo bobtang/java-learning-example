@@ -1,5 +1,7 @@
 package com.example.proxyandcglib.cglib;
 
+import com.example.proxyandcglib.proxy.staticproxy.HouseOfJack;
+import com.example.proxyandcglib.proxy.staticproxy.HouseSale;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.Test;
 import org.springframework.cglib.proxy.Enhancer;
@@ -21,6 +23,17 @@ public class CGLibProxy {
         // 生成代理类并返回一个实例
         MbsConcrete concrete = (MbsConcrete) enhancer.create();
         log.info(concrete.speak("猫"));
+        log.info(concrete.getClass().getName());
+        log.info(concrete.getClass().getSuperclass().getName());
+    }
+
+    @Test
+    public void test02() {
+        Enhancer enhancer = new Enhancer();
+        enhancer.setSuperclass(HouseOfJack.class);
+        enhancer.setCallback(new MyMethodInterceptor());
+        HouseSale concrete = (HouseSale) enhancer.create();
+        concrete.sale();
         log.info(concrete.getClass().getName());
         log.info(concrete.getClass().getSuperclass().getName());
     }
