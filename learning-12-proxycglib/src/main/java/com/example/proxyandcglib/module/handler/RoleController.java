@@ -27,7 +27,7 @@ public class RoleController {
         role.setNick(nick);
         role.setLoginTime((int) (System.currentTimeMillis() / 1000));
         roleService.add(role);
-        return String.format("注册成功");
+        return "success";
     }
 
     /**
@@ -43,6 +43,17 @@ public class RoleController {
         log.info(String.format("登录成功， 登录时间: %d", time));
         role.setLoginTime((int) (System.currentTimeMillis() / 1000));
         roleService.save(role);
-        return String.format("登录成功, nick: %s", role.getNick());
+        return String.format("login success, nick: %s", role.getNick());
+    }
+
+    /**
+     * http://localhost:8080/get?id=1
+     * @param id
+     * @return
+     */
+    @RequestMapping(value = "/get")
+    @ResponseBody
+    public Role get(long id) {
+        return roleService.get(id);
     }
 }
